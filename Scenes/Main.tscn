@@ -1,7 +1,38 @@
 [gd_scene load_steps=2 format=3 uid="uid://c5g66jhris1th"]
 
-[ext_resource type="PackedScene" uid="uid://15rsh1pbqxvk" path="res://Scenes/Patch.tscn" id="1_lrb32"]
+[ext_resource type="PackedScene" uid="uid://d1n3gknohyoxk" path="res://Scenes/Patch.tscn" id="1_lrb32"]
 
-[node name="Main" type="Node2D"]
+[node name="Root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Area2D" parent="." instance=ExtResource("1_lrb32")]
+[node name="Quilt Margin" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Quilt Grid" type="GridContainer" parent="Quilt Margin"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="Grid Cell" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+layout_mode = 2
+
+[node name="Grid Cell2" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+layout_mode = 2
+
+[node name="Grid Cell3" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+layout_mode = 2
+
+[node name="Grid Cell4" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+layout_mode = 2

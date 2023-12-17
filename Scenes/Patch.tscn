@@ -1,22 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://15rsh1pbqxvk"]
+[gd_scene load_steps=5 format=3 uid="uid://d1n3gknohyoxk"]
 
 [ext_resource type="Script" path="res://Scripts/Patch.gd" id="1_0bu47"]
 [ext_resource type="Texture2D" uid="uid://cvg6165yuye6e" path="res://Sprites/patch_hollowknight.png" id="1_mky3g"]
+[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_febc3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xett"]
-size = Vector2(16, 16)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_21s5b"]
+shader = ExtResource("2_febc3")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/is_visible = false
 
-[node name="Patch" type="Area2D" node_paths=PackedStringArray("spriteNode")]
-position = Vector2(20, 20)
+[node name="Grid Cell" type="MarginContainer" node_paths=PackedStringArray("spriteNode")]
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
 script = ExtResource("1_0bu47")
 patchName = "Hollow Knight"
-patchDesc = "The Game Hollow Knight, It's About Bugs I Guess?"
-patchSprite = ExtResource("1_mky3g")
-spriteNode = NodePath("Sprite")
+patchDesc = "TheThe first one in the franchise, and easily top 10"
+highlightShader = ExtResource("2_febc3")
+spriteNode = NodePath("Cell Hitbox/Patch Sprite")
 
-[node name="Collision Box" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_0xett")
+[node name="Cell Hitbox" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = -2
+theme_override_constants/margin_top = -2
+theme_override_constants/margin_right = -2
+theme_override_constants/margin_bottom = -2
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Patch Sprite" type="TextureRect" parent="Cell Hitbox"]
+material = SubResource("ShaderMaterial_21s5b")
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("1_mky3g")
+stretch_mode = 2
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="Cell Hitbox" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Cell Hitbox" to="." method="_on_mouse_exited"]
