@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5g66jhris1th"]
+
+[ext_resource type="PackedScene" uid="uid://15rsh1pbqxvk" path="res://Scenes/Patch.tscn" id="1_lrb32"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Area2D" parent="." instance=ExtResource("1_lrb32")]

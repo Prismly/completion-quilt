@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://15rsh1pbqxvk"]
+
+[ext_resource type="Script" path="res://Scripts/Patch.gd" id="1_0bu47"]
+[ext_resource type="Texture2D" uid="uid://cvg6165yuye6e" path="res://Sprites/patch_hollowknight.png" id="1_mky3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xett"]
+size = Vector2(16, 16)
+
+[node name="Patch" type="Area2D" node_paths=PackedStringArray("spriteNode")]
+position = Vector2(20, 20)
+script = ExtResource("1_0bu47")
+patchName = "Hollow Knight"
+patchDesc = "The Game Hollow Knight, It's About Bugs I Guess?"
+patchSprite = ExtResource("1_mky3g")
+spriteNode = NodePath("Sprite")
+
+[node name="Collision Box" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0xett")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
