@@ -8,10 +8,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
 	# Snap camera to the nearest pixel.
-	#self.offset = Vector2(snapped(self.position.x, 1) - self.position.x,
-			#snapped(self.position.y, 1) - self.position.y)
+	self.offset = Vector2(snapped(self.position.x, 1) - self.position.x,
+			snapped(self.position.y, 1) - self.position.y)
 
 ## Adjusts the zoom and position of this camera.
 ## zoomDelta - The amount by which to change the zoom parameter (+ zooms in).
