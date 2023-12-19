@@ -18,12 +18,18 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=384
 window/size/viewport_height=216
+window/size/window_width_override=1152
+window/size/window_height_override=648
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 
 [dotnet]
 
 project/assembly_name="Completion Quilt"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/Prismly/Documents/Github/completion-quilt/Demos/movie_file.avi"
 
 [rendering]
 

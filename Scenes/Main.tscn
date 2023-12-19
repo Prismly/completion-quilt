@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5g66jhris1th"]
+[gd_scene load_steps=5 format=3 uid="uid://c5g66jhris1th"]
 
+[ext_resource type="Script" path="res://Scripts/PanArea.gd" id="1_k3ucs"]
 [ext_resource type="PackedScene" uid="uid://d1n3gknohyoxk" path="res://Scenes/Patch.tscn" id="1_lrb32"]
+[ext_resource type="Script" path="res://Scripts/CameraController.gd" id="2_r5mvx"]
+[ext_resource type="Texture2D" uid="uid://dxhopptqxpcyp" path="res://Sprites/pin_mariogalaxy1.png" id="4_t8jaf"]
 
 [node name="Root" type="Control"]
 layout_mode = 3
@@ -9,30 +12,59 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
-[node name="Quilt Margin" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 1
-theme_override_constants/margin_top = 1
-theme_override_constants/margin_right = 1
-theme_override_constants/margin_bottom = 1
+[node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Quilt Grid" type="GridContainer" parent="Quilt Margin"]
+[node name="Camera" type="Camera2D" parent="HUD"]
+position_smoothing_speed = 10.0
+script = ExtResource("2_r5mvx")
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/Camera"]
+texture = ExtResource("4_t8jaf")
+
+[node name="Back Color" type="ColorRect" parent="HUD"]
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="Drag Region" type="ColorRect" parent="HUD" node_paths=PackedStringArray("mainCamera")]
+anchors_preset = -1
+anchor_right = 0.75
+anchor_bottom = 1.0
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_k3ucs")
+mainCamera = NodePath("../Camera")
+
+[node name="Quilt Area" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.75
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="Quilt Grid" type="GridContainer" parent="Quilt Area"]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 2
 
-[node name="Grid Cell" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+[node name="Grid Cell" parent="Quilt Area/Quilt Grid" instance=ExtResource("1_lrb32")]
 layout_mode = 2
 
-[node name="Grid Cell2" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+[node name="Grid Cell2" parent="Quilt Area/Quilt Grid" instance=ExtResource("1_lrb32")]
 layout_mode = 2
 
-[node name="Grid Cell3" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+[node name="Grid Cell3" parent="Quilt Area/Quilt Grid" instance=ExtResource("1_lrb32")]
 layout_mode = 2
 
-[node name="Grid Cell4" parent="Quilt Margin/Quilt Grid" instance=ExtResource("1_lrb32")]
+[node name="Grid Cell4" parent="Quilt Area/Quilt Grid" instance=ExtResource("1_lrb32")]
 layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[connection signal="mouse_entered" from="HUD/Drag Region" to="HUD/Drag Region" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/Drag Region" to="HUD/Drag Region" method="_on_mouse_exited"]
