@@ -19,18 +19,13 @@ func _input(event):
 			dragging = true # LMB pressed on draggable area; start dragging.
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.is_released():
 			# Zoom in
-			temp_zoom_call(1)
+			mainCamera.zoom_cam(1)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.is_released():
 			# Zoom out
-			temp_zoom_call(-1)
+			mainCamera.zoom_cam(-1)
 	elif event is InputEventMouseMotion and dragging: 
-		mainCamera.panCam(-event.relative) # Mouse movement; move the camera accordingly.
-
-func temp_zoom_call(scale):
-	#var cursorDelta : Vector2 = get_viewport().get_mouse_position()
-	#cursorDelta -= self.position + (self.size / 2)
-	#cursorDelta -= Vector2(get_viewport().size) / 2
-	mainCamera.zoomCam(scale)
+		mainCamera.pan_cam(-event.relative) # Mouse movement; move the camera accordingly.
+		#self.position = Vector2(mainCamera.position.x - (mainCamera.screenSize().x / 2), mainCamera.position.y - (mainCamera.screenSize().y / 2))
 
 func _on_mouse_entered():
 	hovering = true

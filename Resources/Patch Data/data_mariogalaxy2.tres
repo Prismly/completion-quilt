@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PatchData" load_steps=2 format=3 uid="uid://dkgxw8iqd3gvw"]
+
+[ext_resource type="Script" path="res://Scripts/PatchData.gd" id="1_w704a"]
+
+[resource]
+script = ExtResource("1_w704a")
+internal_id = 3
+patch_name = "Mario Galaxy 2"
+patch_desc = "Farther Out"
+sprite_path = "pin_mariogalaxy2.png"
+grid_location = Vector2i(30, 20)
+child_patches = []

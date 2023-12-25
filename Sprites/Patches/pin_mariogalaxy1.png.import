@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjhf42dpwn5ta"
-path="res://.godot/imported/pin_mariogalaxy2.png-310c0f25e650dd2815e29fbee2036a43.ctex"
+uid="uid://dxhopptqxpcyp"
+path="res://.godot/imported/pin_mariogalaxy1.png-190f01851700ff08f8b808399c7e6172.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pin_mariogalaxy2.png"
-dest_files=["res://.godot/imported/pin_mariogalaxy2.png-310c0f25e650dd2815e29fbee2036a43.ctex"]
+source_file="res://Sprites/Patches/pin_mariogalaxy1.png"
+dest_files=["res://.godot/imported/pin_mariogalaxy1.png-190f01851700ff08f8b808399c7e6172.ctex"]
 
 [params]
 

@@ -15,7 +15,7 @@ func _process(delta):
 ## Adjusts the zoom and position of this camera.
 ## zoomDelta - The amount by which to change the zoom parameter (+ zooms in).
 ## cursorDelta - Viewport coord vector from the center of the camera region to the cursor position.
-func zoomCam(zoomDelta : float):
+func zoom_cam(zoomDelta : float):
 	var oldZoomScl : float = zoomScale
 	# Change zoom scale, ensuring we don't hit 0 (which is undefined behavior).
 	zoomScale = clamp(zoomScale + zoomDelta, 1, 4)
@@ -38,9 +38,11 @@ func zoomCam(zoomDelta : float):
 		
 		var posShift : Vector2 = (mousePos - viewportCenter) / (shiftZoomScl * (shiftZoomScl + 1)) * zoomDeltaSign
 		self.position += posShift
-		print(posShift)
 
-func panCam(posDelta : Vector2):
+func pan_cam(posDelta : Vector2):
 	var oldPosition : Vector2 = self.position
 	# Move camera object along the offset, scaling by current zoom.
 	self.position += posDelta / zoomScale
+
+func screen_size():
+	return get_viewport_rect().size

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvg6165yuye6e"
-path="res://.godot/imported/patch_hollowknight.png-aaefb051bce6b5964350bed4d68fddca.ctex"
+uid="uid://dg1hntlifftc8"
+path="res://.godot/imported/smallest_marshmallow.png-8fd7a5594bcbcdacb9d45d1bf7d4d79b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/patch_hollowknight.png"
-dest_files=["res://.godot/imported/patch_hollowknight.png-aaefb051bce6b5964350bed4d68fddca.ctex"]
+source_file="res://Sprites/Patches/smallest_marshmallow.png"
+dest_files=["res://.godot/imported/smallest_marshmallow.png-8fd7a5594bcbcdacb9d45d1bf7d4d79b.ctex"]
 
 [params]
 

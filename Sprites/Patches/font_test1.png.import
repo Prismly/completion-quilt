@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8in32mvycjol"
-path="res://.godot/imported/patch_mario.png-159b028efcb76db196236492c4d8a29a.ctex"
+uid="uid://ci0vt28urfj5d"
+path="res://.godot/imported/font_test1.png-96fec05c414bcef4c2354c765f79cc80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/patch_mario.png"
-dest_files=["res://.godot/imported/patch_mario.png-159b028efcb76db196236492c4d8a29a.ctex"]
+source_file="res://Sprites/Patches/font_test1.png"
+dest_files=["res://.godot/imported/font_test1.png-96fec05c414bcef4c2354c765f79cc80.ctex"]
 
 [params]
 

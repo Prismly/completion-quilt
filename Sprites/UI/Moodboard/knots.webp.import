@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxhopptqxpcyp"
-path="res://.godot/imported/pin_mariogalaxy1.png-9a7d5af6c2008053e594ffe101dd9809.ctex"
+uid="uid://7n8a4dqei7j3"
+path="res://.godot/imported/knots.webp-db8be74a7ba624a521c08b64b665727c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pin_mariogalaxy1.png"
-dest_files=["res://.godot/imported/pin_mariogalaxy1.png-9a7d5af6c2008053e594ffe101dd9809.ctex"]
+source_file="res://Sprites/UI/Moodboard/knots.webp"
+dest_files=["res://.godot/imported/knots.webp-db8be74a7ba624a521c08b64b665727c.ctex"]
 
 [params]
 

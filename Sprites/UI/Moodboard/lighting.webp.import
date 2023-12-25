@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg1hntlifftc8"
-path="res://.godot/imported/smallest_marshmallow.png-c4462ce41c6eb537c54ae7ca0b504f47.ctex"
+uid="uid://bkyrdq77aws6m"
+path="res://.godot/imported/lighting.webp-ed6889a3344d7edfed27c8a9612d76ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/smallest_marshmallow.png"
-dest_files=["res://.godot/imported/smallest_marshmallow.png-c4462ce41c6eb537c54ae7ca0b504f47.ctex"]
+source_file="res://Sprites/UI/Moodboard/lighting.webp"
+dest_files=["res://.godot/imported/lighting.webp-ed6889a3344d7edfed27c8a9612d76ad.ctex"]
 
 [params]
 

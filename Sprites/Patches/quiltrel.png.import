@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkbi8hqx6n5o3"
-path="res://.godot/imported/patch_missing.png-8f3f1b14208c1f47c78f2594f67abe07.ctex"
+uid="uid://cc8q5m5lhyj5p"
+path="res://.godot/imported/quiltrel.png-7e23dd56be711ddee04787c5458877d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/patch_missing.png"
-dest_files=["res://.godot/imported/patch_missing.png-8f3f1b14208c1f47c78f2594f67abe07.ctex"]
+source_file="res://Sprites/Patches/quiltrel.png"
+dest_files=["res://.godot/imported/quiltrel.png-7e23dd56be711ddee04787c5458877d2.ctex"]
 
 [params]
 
