@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbvkndom4mcet"]
+
+[ext_resource type="Texture2D" uid="uid://drr80qwwetbi8" path="res://Sprites/UI/bg_patch.png" id="1_816df"]
+[ext_resource type="PackedScene" uid="uid://daqlebdw31n1d" path="res://Scenes/ExplorerItem.tscn" id="2_vqjpk"]
+
+[node name="MyPatchworks" type="Node"]
+
+[node name="BG" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_816df")
+stretch_mode = 1
+
+[node name="Explorer BG" type="ColorRect" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.415686, 0.337255, 1, 1)
+
+[node name="Explorer Window" type="ScrollContainer" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/Explorer Window"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="GridContainer" type="GridContainer" parent="BG/Explorer Window/MarginContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="Explorer Item" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item2" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item3" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item4" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item5" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item6" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item7" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item8" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2
+
+[node name="Explorer Item9" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+layout_mode = 2

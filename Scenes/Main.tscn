@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://yt0c48ikmfgu"]
+[gd_scene load_steps=4 format=3 uid="uid://yt0c48ikmfgu"]
 
 [ext_resource type="Script" path="res://Scripts/PanArea.gd" id="1_k3ucs"]
 [ext_resource type="PackedScene" uid="uid://7jxtg5gd7sui" path="res://Scenes/PatchworkManager.tscn" id="2_iulim"]
 [ext_resource type="Script" path="res://Scripts/CameraController.gd" id="2_r5mvx"]
-[ext_resource type="Texture2D" path="res://Sprites/patch_hollowknight.png" id="3_syejx"]
-[ext_resource type="Texture2D" path="res://Sprites/font_test1.png" id="4_ked0n"]
 
 [node name="Node" type="Node"]
 
@@ -12,31 +10,24 @@
 script = ExtResource("2_r5mvx")
 
 [node name="Patchwork Manager" parent="." instance=ExtResource("2_iulim")]
-debug_texture = ExtResource("3_syejx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-143, -65)
-texture = ExtResource("4_ked0n")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-143, -58)
-texture = ExtResource("4_ked0n")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(-51, -65)
-texture = ExtResource("4_ked0n")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(-51, -58)
-texture = ExtResource("4_ked0n")
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(47, -65)
-texture = ExtResource("4_ked0n")
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
 position = Vector2(47, -58)
-texture = ExtResource("4_ked0n")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Patch.gd" id="1_135ti"]
 [ext_resource type="Resource" uid="uid://bribqo2no100o" path="res://Resources/Patch Data/data_hollowknight.tres" id="2_muvc8"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="3_054n3"]
-[ext_resource type="Texture2D" uid="uid://cvg6165yuye6e" path="res://Sprites/patch_hollowknight.png" id="4_lli3d"]
+[ext_resource type="Texture2D" uid="uid://cvg6165yuye6e" path="res://Sprites/Patches/patch_hollowknight.png" id="4_lli3d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mpwl3"]
 shader = ExtResource("3_054n3")
