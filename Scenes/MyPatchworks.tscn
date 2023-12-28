@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbvkndom4mcet"]
+[gd_scene load_steps=7 format=3 uid="uid://cbvkndom4mcet"]
 
-[ext_resource type="Texture2D" uid="uid://drr80qwwetbi8" path="res://Sprites/UI/bg_patch.png" id="1_816df"]
+[ext_resource type="Texture2D" uid="uid://kni63xwxco5k" path="res://Sprites/UI/bg_patch_yellow.png" id="1_snwmy"]
+[ext_resource type="Texture2D" uid="uid://cq6o7biwbevj5" path="res://Sprites/UI/bg_patch_green.png" id="2_apb18"]
 [ext_resource type="PackedScene" uid="uid://daqlebdw31n1d" path="res://Scenes/ExplorerItem.tscn" id="2_vqjpk"]
+[ext_resource type="Texture2D" uid="uid://du3524q2a22or" path="res://Sprites/UI/patch_add_file_01.png" id="4_ftmn7"]
+[ext_resource type="Texture2D" uid="uid://wasve8kqc68m" path="res://Sprites/UI/patch_add_file_03.png" id="5_wnsoe"]
+[ext_resource type="Texture2D" uid="uid://bkonnw8lm6eg1" path="res://Sprites/UI/patch_add_file_02.png" id="6_pk2u1"]
 
 [node name="MyPatchworks" type="Node"]
 
@@ -11,68 +15,80 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_816df")
+texture = ExtResource("1_snwmy")
 stretch_mode = 1
 
-[node name="Explorer BG" type="ColorRect" parent="BG"]
+[node name="MarginContainer" type="MarginContainer" parent="BG"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.415686, 0.337255, 1, 1)
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 21
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
 
-[node name="Explorer Window" type="ScrollContainer" parent="BG"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Explorer BG" type="TextureRect" parent="BG/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_apb18")
+stretch_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="BG/Explorer Window"]
+[node name="Explorer Window" type="ScrollContainer" parent="BG/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BG/MarginContainer/Explorer Window"]
 layout_mode = 2
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="GridContainer" type="GridContainer" parent="BG/Explorer Window/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="BG/MarginContainer/Explorer Window/MarginContainer"]
 layout_mode = 2
 columns = 4
 
-[node name="Explorer Item" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+custom_minimum_size = Vector2(82, 69)
 layout_mode = 2
+item_name = "invisibleelement."
 
-[node name="Explorer Item2" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item2" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "clickhereforfreemoney"
 
-[node name="Explorer Item3" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item3" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "thedinnerfile"
 
-[node name="Explorer Item4" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item4" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "fi-fileton-g-fileton"
 
-[node name="Explorer Item5" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item5" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "ben-hollering"
 
-[node name="Explorer Item6" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item6" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "jpg.pngn"
 
-[node name="Explorer Item7" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item7" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "Definitely_not_a_virus_ver_1.1.1.zip"
 
-[node name="Explorer Item8" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item8" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "urmom"
 
-[node name="Explorer Item9" parent="BG/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
+[node name="Explorer Item9" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer" instance=ExtResource("2_vqjpk")]
 layout_mode = 2
+item_name = "Yr'oue Dad"
+
+[node name="TextureButton" type="TextureButton" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_ftmn7")
+texture_pressed = ExtResource("5_wnsoe")
+texture_hover = ExtResource("6_pk2u1")
+stretch_mode = 3
