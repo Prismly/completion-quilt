@@ -1,9 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://daqlebdw31n1d"]
+[gd_scene load_steps=9 format=3 uid="uid://daqlebdw31n1d"]
 
 [ext_resource type="Texture2D" uid="uid://bmxp7mq1j811" path="res://Sprites/Patches/smallest_tofu.png" id="1_s8gtl"]
 [ext_resource type="Texture2D" uid="uid://c5p62wttpsflv" path="res://Sprites/UI/ui_patch_red_big.png" id="1_sy20r"]
 [ext_resource type="Script" path="res://Scripts/ExplorerItem.gd" id="2_c3ft7"]
 [ext_resource type="Theme" uid="uid://bqre233o8rwuv" path="res://Themes/cross_stitch.tres" id="2_gqe8t"]
+[ext_resource type="Texture2D" uid="uid://dos5ukpm0ddd" path="res://Sprites/UI/delete_file_sheet.png" id="5_0piuv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlwth"]
+atlas = ExtResource("5_0piuv")
+region = Rect2(0, 0, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7xek"]
+atlas = ExtResource("5_0piuv")
+region = Rect2(44, 0, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72yta"]
+atlas = ExtResource("5_0piuv")
+region = Rect2(22, 0, 22, 22)
 
 [node name="Explorer Item" type="TextureButton"]
 custom_minimum_size = Vector2(80, 67)
@@ -15,12 +28,12 @@ script = ExtResource("2_c3ft7")
 
 [node name="Thumbnail" type="TextureRect" parent="."]
 modulate = Color(0.411765, 0.2, 0.305882, 1)
-custom_minimum_size = Vector2(47, 47)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_top = 2.0
+offset_top = 3.0
 grow_horizontal = 2
 texture = ExtResource("1_s8gtl")
 expand_mode = 4
@@ -40,8 +53,26 @@ grow_vertical = 0
 theme = ExtResource("2_gqe8t")
 theme_override_colors/font_color = Color(0.411765, 0.2, 0.305882, 1)
 theme_override_constants/line_spacing = 0
-text = "Lorem Ipsum Dolor Sit Amet"
+text = "CompletionQuilt"
 horizontal_alignment = 1
-autowrap_mode = 3
+autowrap_mode = 1
 text_overrun_behavior = 3
 max_lines_visible = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -21.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 21.0
+grow_horizontal = 0
+texture_normal = SubResource("AtlasTexture_mlwth")
+texture_pressed = SubResource("AtlasTexture_u7xek")
+texture_hover = SubResource("AtlasTexture_72yta")
+ignore_texture_size = true
+stretch_mode = 3

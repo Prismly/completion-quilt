@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://bqre233o8rwuv"]
 
-[ext_resource type="FontFile" uid="uid://rf42vvgyge25" path="res://Sprites/UI/cross_stitch_v1.ttf" id="1_schqj"]
+[ext_resource type="FontFile" uid="uid://bnlo2g7at6j50" path="res://Sprites/UI/cross_stitch_v2.ttf" id="1_0mo1g"]
 
 [resource]
-default_font = ExtResource("1_schqj")
+default_font = ExtResource("1_0mo1g")
 default_font_size = 8

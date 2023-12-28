@@ -86,7 +86,10 @@ item_name = "urmom"
 layout_mode = 2
 item_name = "Yr'oue Dad"
 
-[node name="TextureButton" type="TextureButton" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer"]
+[node name="Create File Item" type="CenterContainer" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="TextureButton" parent="BG/MarginContainer/Explorer Window/MarginContainer/GridContainer/Create File Item"]
 layout_mode = 2
 texture_normal = ExtResource("4_ftmn7")
 texture_pressed = ExtResource("5_wnsoe")
