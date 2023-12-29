@@ -33,15 +33,14 @@
 ### [UC4] Edit Patchwork
 [Prerequisites] User is in the Patchwork editing window
 - On double-clicking 
-
-### [UC2] Create Patchwork
-[Prerequisites] User is in the Patchwork editing window
 ### [UC] Navigate Patchwork Window
 [Prerequisites] User is in the Patchwork editing window
 
 
-
-### [UC] Add New Patch
+### [UC] Select Patch
+[Prerequisites] User is in the Patchwork editing window
+- On clicking 
+### [UC] Import Patch
 [Prerequisites] User is in the Patchwork editing window
 - ...by selecting a file from my hard drive through in-game UI...
 	- ...and seeing a popup error/warning if the image is too big to be convenient

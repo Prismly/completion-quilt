@@ -6,7 +6,7 @@ extends Resource
 @export var patch_desc: String
 @export var sprite_path: String
 @export var grid_location: Vector2i
-@export var child_patches = []
+@export var grid_layer: int
 
 func _init():
 	pass

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bmxp7mq1j811" path="res://Sprites/Patches/smallest_tofu.png" id="1_s8gtl"]
 [ext_resource type="Texture2D" uid="uid://c5p62wttpsflv" path="res://Sprites/UI/ui_patch_red_big.png" id="1_sy20r"]
 [ext_resource type="Script" path="res://Scripts/ExplorerItem.gd" id="2_c3ft7"]
-[ext_resource type="Theme" uid="uid://bqre233o8rwuv" path="res://Themes/cross_stitch.tres" id="2_gqe8t"]
+[ext_resource type="Theme" uid="uid://bqre233o8rwuv" path="res://Themes/font_stitched_thin.tres" id="4_k6hd8"]
 [ext_resource type="Texture2D" uid="uid://dos5ukpm0ddd" path="res://Sprites/UI/delete_file_sheet.png" id="5_0piuv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mlwth"]
@@ -50,7 +50,7 @@ offset_right = -1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("2_gqe8t")
+theme = ExtResource("4_k6hd8")
 theme_override_colors/font_color = Color(0.411765, 0.2, 0.305882, 1)
 theme_override_constants/line_spacing = 0
 text = "CompletionQuilt"

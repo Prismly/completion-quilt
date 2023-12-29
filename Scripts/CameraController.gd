@@ -23,7 +23,6 @@ func zoom_cam(zoomDelta : float):
 	
 	# Move the camera's center to halfway between current and the mouse position.
 	if (oldZoomScl != zoomScale):
-		#self.position += cursorDelta
 		var mousePos : Vector2 = get_viewport().get_mouse_position()
 		var viewportCenter : Vector2 = get_viewport_rect().size / 2
 		

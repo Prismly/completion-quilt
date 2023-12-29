@@ -9,4 +9,4 @@ patch_name = "Super Mario Bros."
 patch_desc = "Wahoo Franchise"
 sprite_path = "patch_mario.png"
 grid_location = Vector2i(16, 0)
-child_patches = [2, 3]
+grid_layer = 0

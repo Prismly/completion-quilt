@@ -8,5 +8,5 @@ internal_id = 3
 patch_name = "Mario Galaxy 2"
 patch_desc = "Farther Out"
 sprite_path = "pin_mariogalaxy2.png"
-grid_location = Vector2i(30, 20)
-child_patches = []
+grid_location = Vector2i(10, 15)
+grid_layer = 1

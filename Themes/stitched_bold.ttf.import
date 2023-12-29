@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bnlo2g7at6j50"
-path="res://.godot/imported/cross_stitch_v2.ttf-ec5175bf40d0ac4dbd29f2a980cad90a.fontdata"
+uid="uid://b8232yaj7pj2g"
+path="res://.godot/imported/stitched_bold.ttf-e9ae93dc00810dfd3867eb62a7e188ca.fontdata"
 
 [deps]
 
-source_file="res://Sprites/UI/cross_stitch_v2.ttf"
-dest_files=["res://.godot/imported/cross_stitch_v2.ttf-ec5175bf40d0ac4dbd29f2a980cad90a.fontdata"]
+source_file="res://Themes/stitched_bold.ttf"
+dest_files=["res://.godot/imported/stitched_bold.ttf-e9ae93dc00810dfd3867eb62a7e188ca.fontdata"]
 
 [params]
 

@@ -9,4 +9,4 @@ patch_name = "Hollow Knight"
 patch_desc = "Bug Game"
 sprite_path = "patch_hollowknight.png"
 grid_location = Vector2i(-16, 0)
-child_patches = []
+grid_layer = 0

@@ -25,7 +25,6 @@ func _input(event):
 			mainCamera.zoom_cam(-1)
 	elif event is InputEventMouseMotion and dragging: 
 		mainCamera.pan_cam(-event.relative) # Mouse movement; move the camera accordingly.
-		#self.position = Vector2(mainCamera.position.x - (mainCamera.screenSize().x / 2), mainCamera.position.y - (mainCamera.screenSize().y / 2))
 
 func _on_mouse_entered():
 	hovering = true
